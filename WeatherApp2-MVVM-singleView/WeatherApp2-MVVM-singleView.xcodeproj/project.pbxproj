@@ -16,6 +16,8 @@
 		A95E335C22EEE1BF00AE002D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E335B22EEE1BF00AE002D /* ViewModel.swift */; };
 		A95E336022EEE1E300AE002D /* WeatherMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E335F22EEE1E300AE002D /* WeatherMetadata.swift */; };
 		A95E336322EEEA1C00AE002D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E336222EEEA1C00AE002D /* NetworkManager.swift */; };
+		A95E336522EF0E9D00AE002D /* Extension-ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E336422EF0E9D00AE002D /* Extension-ViewController.swift */; };
+		A95E336822EF12CA00AE002D /* Extansion-ViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E336722EF12CA00AE002D /* Extansion-ViewController+UITextFieldDelegate.swift */; };
 		E3DBFD85631E7B3AE6DEBC65 /* Pods_WeatherApp2_MVVM_singleView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BCE74C970D19F02F2DCA10 /* Pods_WeatherApp2_MVVM_singleView.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		A95E335B22EEE1BF00AE002D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A95E335F22EEE1E300AE002D /* WeatherMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMetadata.swift; sourceTree = "<group>"; };
 		A95E336222EEEA1C00AE002D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A95E336422EF0E9D00AE002D /* Extension-ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-ViewController.swift"; sourceTree = "<group>"; };
+		A95E336722EF12CA00AE002D /* Extansion-ViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extansion-ViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		BC049E2302C80F263D8C7937 /* Pods-WeatherApp2-MVVM-singleView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp2-MVVM-singleView.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp2-MVVM-singleView/Pods-WeatherApp2-MVVM-singleView.debug.xcconfig"; sourceTree = "<group>"; };
 		D6BCE74C970D19F02F2DCA10 /* Pods_WeatherApp2_MVVM_singleView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp2_MVVM_singleView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				A95E334922EED6E300AE002D /* ViewController.swift */,
+				A95E336422EF0E9D00AE002D /* Extension-ViewController.swift */,
+				A95E336722EF12CA00AE002D /* Extansion-ViewController+UITextFieldDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,7 +250,9 @@
 				A95E335A22EEE0CD00AE002D /* Box.swift in Sources */,
 				A95E334A22EED6E300AE002D /* ViewController.swift in Sources */,
 				A95E335C22EEE1BF00AE002D /* ViewModel.swift in Sources */,
+				A95E336522EF0E9D00AE002D /* Extension-ViewController.swift in Sources */,
 				A95E334822EED6E300AE002D /* AppDelegate.swift in Sources */,
+				A95E336822EF12CA00AE002D /* Extansion-ViewController+UITextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
