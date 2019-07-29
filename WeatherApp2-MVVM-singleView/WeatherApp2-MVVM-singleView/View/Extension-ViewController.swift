@@ -12,13 +12,18 @@ import UIKit
 extension ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
+        self.setNeedsStatusBarAppearanceUpdate()
+        
+        let greyColor = UIColor(red:0.81, green:0.81, blue:0.81, alpha:1.0)
+        let lightGreyColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
         for label in weatherLabels {
-            label.textColor = .white
+            label.textColor = lightGreyColor
         }
-        textField.layer.borderColor = UIColor(red:0.81, green:0.81, blue:0.81, alpha:1.0).cgColor
+        
+        textField.layer.borderColor = greyColor.cgColor
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1.0
-        textField.attributedPlaceholder = NSAttributedString(string: "Weather in ?", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red:0.81, green:0.81, blue:0.81, alpha:1.0)])
+        textField.attributedPlaceholder = NSAttributedString(string: "Weather in ?", attributes: [NSAttributedString.Key.foregroundColor: greyColor])
         
         backgroundView.layer.addSublayer(gradientLayer)
         setBlueGradientBackground()
@@ -38,4 +43,7 @@ extension ViewController {
         gradientLayer.colors = [topColor, bottomColor]
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
