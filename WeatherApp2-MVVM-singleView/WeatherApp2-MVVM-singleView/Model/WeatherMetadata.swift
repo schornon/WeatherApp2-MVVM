@@ -17,3 +17,10 @@ struct WeatherMetadata {
     var windDirection : String = ""
     var weatherImageName : String = ""
 }
+
+enum Status {
+    case first
+    case loading
+    case done
+    case failure
+}

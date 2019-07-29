@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var weatherLabels: [UILabel]!
+    @IBOutlet var weatherImageLabels: [UIImageView]!
     @IBOutlet weak var weatherImagView: UIImageView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var backgroundView: UIView!
     let gradientLayer = CAGradientLayer()
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
     
     var viewModel : ViewModel?
     
@@ -43,6 +45,30 @@ class ViewController: UIViewController {
                     self.setGreyGradientBackground()
                 default:
                     self.setBlueGradientBackground()
+                }
+            }
+        }
+        
+        viewModel?.status.bind {
+            switch $0 {
+            case .done:
+                self.activityView.alpha = 0
+                self.activityView.stopAnimating()
+            case .failure:
+                self.activityView.alpha = 0
+                self.activityView.stopAnimating()
+            case .loading:
+                self.activityView.alpha = 1
+                self.activityView.startAnimating()
+            case .first:
+                print("first load")
+            }
+        }
+        
+        viewModel?.flag.bind {
+            if $0 == true {
+                for imgView in self.weatherImageLabels {
+                    imgView.alpha = 1.0
                 }
             }
         }

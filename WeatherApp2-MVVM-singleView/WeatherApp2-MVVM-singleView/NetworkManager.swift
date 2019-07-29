@@ -29,21 +29,24 @@ class NetworkManager {
     
     func successHandle(_ response: Response) {
         if let location = response.get(entity: "location") {
-            print(location)
+            //print(location)
             getWeather(lat: location["lat"]! as! Double,
                        lon: location["lng"]! as! Double,
                        locationName: "\((location["raw"])!), \(String(describing: location["country"]!).uppercased())")
+        } else {
+            viewModel?.status.value = .failure
         }
     }
     
     func failureHandle(_ error: Error) {
         print("failureHandle")
+        viewModel?.status.value = .failure
     }
     
     func getWeather(lat: Double, lon: Double, locationName: String) {
         let url = "http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&appid=\(apiKey)&units=metric"
         Alamofire.request(url).responseJSON { response in
-            //activity indicator
+
             if let response = response.result.value {
                 let jsonResponse = JSON(response)
                 let jsonWeather = jsonResponse["weather"].array![0]
@@ -53,11 +56,14 @@ class NetworkManager {
                 let temperature = "\(Int(round(jsonTemp["temp"].doubleValue))) °C"
                 let pressure = "\(Int(round(jsonTemp["pressure"].doubleValue))) hPa"
                 let humidity = "\(Int(round(jsonTemp["humidity"].doubleValue))) %"
-                let windSpeed = "\(Int(round(jsonWind["speed"].doubleValue))) meter/sec"
+                let windSpeed = "\(Int(round(jsonWind["speed"].doubleValue))) m/sec"
                 let windDirection = "\(Int(round(jsonWind["speed"].doubleValue))) °"
                 let iconName = jsonWeather["icon"].stringValue
                 
                 self.viewModel?.metadata.value = WeatherMetadata(locationName: locationName, temperature: temperature, atmosphericPressure: pressure, humidity: humidity, windSpeed: windSpeed, windDirection: windDirection, weatherImageName: iconName)
+                
+                self.viewModel?.flag.value = true
+                self.viewModel?.status.value = .done
             }
         }
     }

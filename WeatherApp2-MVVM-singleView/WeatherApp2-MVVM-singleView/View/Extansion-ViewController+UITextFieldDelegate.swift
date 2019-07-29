@@ -15,6 +15,7 @@ extension ViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         print("return key")
         if textField.text?.isEmpty == false {
+            viewModel?.status.value = .loading
             viewModel?.fetchMetadata(request: textField.text!)
             textField.text = ""
             return true
