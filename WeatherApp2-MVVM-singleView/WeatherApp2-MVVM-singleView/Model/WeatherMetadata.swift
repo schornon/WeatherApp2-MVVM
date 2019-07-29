@@ -17,12 +17,3 @@ struct WeatherMetadata {
     var windDirection : String = ""
     var weatherImageName : String = ""
 }
-
-/*
- var locationName : String = "Location Name"
- var temperature : String = "Temperature: "
- var atmosphericPressure : String = "Atmospheric pressure: "
- var humidity : String = "Humidity: "
- var windSpeed : String = "Wind speed: "
- var windDirection : String = "Wind direction: "
- */

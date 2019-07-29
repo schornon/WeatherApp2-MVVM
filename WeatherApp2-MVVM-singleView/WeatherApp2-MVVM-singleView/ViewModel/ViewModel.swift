@@ -12,12 +12,9 @@ class ViewModel {
     
     var networkManager = NetworkManager()
     
-//    var metadata : Box<WeatherMetadata> = Box(WeatherMetadata(locationName: "location", temperature: "temp", atmosphericPressure: "pressure", humidity: "numidity", windSpeed: "windSpeed", windDirection: "windDirection"))
+    var metadata : Box<WeatherMetadata> = Box(WeatherMetadata())
     
     func fetchMetadata(request: String) {
-        networkManager.fetchMetadata(request: request)
+        networkManager.fetchMetadata(request: request, viewModel: self)
     }
-    
-//    var request = ""
-    
 }
