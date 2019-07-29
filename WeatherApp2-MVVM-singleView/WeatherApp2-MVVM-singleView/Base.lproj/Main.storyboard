@@ -106,6 +106,7 @@
                                     <constraint firstAttribute="bottomMargin" secondItem="WUj-Do-zFC" secondAttribute="bottom" id="Nzq-lw-hw1"/>
                                     <constraint firstItem="Vfq-ry-DER" firstAttribute="centerY" secondItem="ZqT-Ew-CiH" secondAttribute="centerY" id="Oft-D0-1dH"/>
                                     <constraint firstItem="7BP-Pp-emO" firstAttribute="centerY" secondItem="012-hE-ep8" secondAttribute="centerY" id="OoF-IB-Ivu"/>
+                                    <constraint firstItem="012-hE-ep8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vfq-ry-DER" secondAttribute="trailing" constant="5" id="PhC-I4-yVy"/>
                                     <constraint firstItem="R4k-Ml-Sta" firstAttribute="centerY" secondItem="cWC-zk-1NK" secondAttribute="centerY" id="QCt-Fx-e4c"/>
                                     <constraint firstItem="IXz-9w-YQE" firstAttribute="width" secondItem="ZqT-Ew-CiH" secondAttribute="width" id="RDi-VQ-uRG"/>
                                     <constraint firstItem="012-hE-ep8" firstAttribute="top" secondItem="aut-PS-Vui" secondAttribute="topMargin" id="RF3-Kq-xXT"/>
@@ -113,7 +114,7 @@
                                     <constraint firstItem="OcR-P2-sft" firstAttribute="leading" secondItem="IXz-9w-YQE" secondAttribute="trailing" constant="10" id="TNp-tY-cEg"/>
                                     <constraint firstItem="cVI-Zz-6sl" firstAttribute="centerY" secondItem="JwT-5J-Zsw" secondAttribute="centerY" id="ZeX-0x-GZW"/>
                                     <constraint firstItem="zT5-Oi-AkB" firstAttribute="leading" secondItem="WUj-Do-zFC" secondAttribute="trailing" constant="10" id="anV-r8-bp9"/>
-                                    <constraint firstItem="012-hE-ep8" firstAttribute="centerX" secondItem="aut-PS-Vui" secondAttribute="centerX" constant="40" id="awl-bz-4RX"/>
+                                    <constraint firstItem="012-hE-ep8" firstAttribute="centerX" secondItem="aut-PS-Vui" secondAttribute="centerX" priority="750" constant="40" id="awl-bz-4RX"/>
                                     <constraint firstItem="Vfq-ry-DER" firstAttribute="leading" secondItem="ZqT-Ew-CiH" secondAttribute="trailing" constant="10" id="cGz-E6-MGw"/>
                                     <constraint firstItem="cWC-zk-1NK" firstAttribute="leading" secondItem="ZqT-Ew-CiH" secondAttribute="leading" id="exB-dL-Xxr"/>
                                     <constraint firstItem="IXz-9w-YQE" firstAttribute="height" secondItem="ZqT-Ew-CiH" secondAttribute="height" id="sXJ-qj-JOv"/>

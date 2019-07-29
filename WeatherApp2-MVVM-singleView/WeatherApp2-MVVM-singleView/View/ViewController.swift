@@ -57,6 +57,7 @@ class ViewController: UIViewController {
             case .failure:
                 self.activityView.alpha = 0
                 self.activityView.stopAnimating()
+                self.errorAlert(title: "Error", message: "Can't find this location")
             case .loading:
                 self.activityView.alpha = 1
                 self.activityView.startAnimating()
